@@ -25,11 +25,12 @@ class OotdRecommendationController < ApplicationController
 
         puts(@description)
         puts(@main)
+    
 
         # todo! temperature threshold here
         if (@feels_like_in_F < 32) 
             # below 32 F is very cold
-            @suggestion = image_path("public/verycold.jpg")   
+            @suggestion = ActionController::Base.helpers.asset_path("verycold.jpg")   
         else 
             # above 32 F is moderately cold 
             @suggestion = ActionController::Base.helpers.asset_path("moderatelycold.jpg")
