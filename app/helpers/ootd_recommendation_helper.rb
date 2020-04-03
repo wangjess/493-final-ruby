@@ -1,0 +1,2 @@
+module OotdRecommendationHelper
+end
