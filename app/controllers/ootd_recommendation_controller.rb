@@ -2,7 +2,7 @@ class OotdRecommendationController < ApplicationController
 
     # When you get to the page it'll recommend you an OOTD
     def recommend
-        puts("HELLO INSIDE RECOMMEND")
+        # puts("HELLO INSIDE RECOMMEND")
         require 'net/http'
 
         # Ann Arbor city_id, hardcoded for MVP presentation
@@ -11,9 +11,6 @@ class OotdRecommendationController < ApplicationController
         request = "http://api.openweathermap.org/data/2.5/weather?id=#{city_id}&appid=7226ca3750105d940d7f1afb2dfafcee"
 
         @response = Net::HTTP.get(URI.parse(request))
-
-        # todo! rest of this once API Key is activated.
-        # @project_name = JSON.parse(@response)["name"]
 
         # Kelvin to F 
         @feels_like_in_K = JSON.parse(@response)["main"]["feels_like"]
@@ -29,13 +26,14 @@ class OotdRecommendationController < ApplicationController
         puts(@description)
         puts(@main)
 
-        # handle errors (4xx & 5xx)
-        # if @response.status.client_error? || @response.status.server_error?
-        # flash[:info] = "We are currently verifying and setting up your account. Videos and statistics will be available after we verify you!"
-        # redirect_to root_path
-        # return
-        # end
+        # todo! temperature threshold here
+        if (@feels_like_in_F < 32) 
+            # below 32 F is very cold
+            @suggestion = image_path("public/verycold.jpg")   
+        else 
+            # above 32 F is moderately cold 
+            @suggestion = ActionController::Base.helpers.asset_path("moderatelycold.jpg")
+        end
 
-        # @response = HTTP.get(request).body # didnt get body to handle errors
     end
 end
