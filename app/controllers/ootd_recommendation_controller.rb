@@ -5,7 +5,8 @@ class OotdRecommendationController < ApplicationController
         # puts("HELLO INSIDE RECOMMEND")
         require 'net/http'
 
-        # Ann Arbor city_id, hardcoded for MVP presentation
+        # Ann Arbor city_id: 4984247
+        # Antarctica city_id: 6255152
         city_id = 4984247
         # my APIKey: 72492ca8a2f9c1a7d74e55d25ec1b0aa
         request = "http://api.openweathermap.org/data/2.5/weather?id=#{city_id}&appid=7226ca3750105d940d7f1afb2dfafcee"
@@ -26,8 +27,7 @@ class OotdRecommendationController < ApplicationController
         puts(@description)
         puts(@main)
     
-
-        # todo! temperature threshold here
+        # temperature threshold here
         if (@feels_like_in_F < 32) 
             # below 32 F is very cold
             @suggestion = ActionController::Base.helpers.asset_path("verycold.jpg")   
