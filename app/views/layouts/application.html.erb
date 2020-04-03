@@ -12,13 +12,13 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="width: 100%; height: 5vw;">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item active <%=is_active('welcome/index')%>">
         <a class="nav-link" href="/welcome/index">Home</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item <%=is_active('ootd')%>">
         <a class="nav-link" href="/ootd">OOTD</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item <%=is_active('#')%>">
         <a class="nav-link" href="#">Account</a>
       </li>
     </ul>
