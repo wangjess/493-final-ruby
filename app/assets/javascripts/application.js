@@ -15,3 +15,9 @@
 //= require turbolinks
 //= require_tree .
 //= require jquery
+
+
+// Shows animation for login
+$("#loginbutton").click(function(){
+    $("#your_id").style.visibility = 'visible';
+});

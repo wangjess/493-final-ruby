@@ -1,8 +1,9 @@
 module LoginHelper
     def login_user
-        # Login hard-coded user for MVP purposes
-        "fucking work"
+        puts("asdfasdfasdfas")
 
-        render :html => "<%= MarkSai has logged in! %>"
+        # Login hard-coded user for MVP purposes
+        render html: '<div>html goes here</div>'.html_safe
+
     end
 end
