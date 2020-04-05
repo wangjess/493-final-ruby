@@ -14,10 +14,27 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-//= require jquery
-
 
 // Shows animation for login
-$("#loginbutton").click(function(){
-    $("#your_id").style.visibility = 'visible';
+// $("#loginbutton").click(function(){
+//     $("#your_id").style.visibility = 'visible';
+// });
+
+// For Upload Photo 
+// function uploadPhoto() {
+//     $(".uploadbutton").click(function(){
+//         console.log("HELLO");
+//         // $("#photo_id").style.visibility = 'visible';
+//         $("#photo_id").show();
+//         console.log("changed visibility!!!!");
+//     })
+// }
+
+$(document).ready(function(){
+    console.log("ready!!!");
+  $("#uploadbutton").click(function(){
+    $("#photo_id").show();
+  });
 });
+
+// $(document).ready(uploadPhoto());

@@ -4,7 +4,13 @@
     <br>
     <br>
 
-    <p>Here are your favorited posts:</p>
+    <p>Upload a photo to the world!</p>
 
-    <!-- list of saved images -->
-</div>
+    <button id="uploadbutton" type="button" onclick=" alert(this)" class="btn btn-primary">Upload</button>
+
+    <div class="hidden" id="photo_id">
+        <%= image_tag(ActionController::Base.helpers.asset_path("selfie.jpeg")) %>
+    </div>
+</div> 
+
+

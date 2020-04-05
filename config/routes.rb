@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   # todo! not really necessary right now
   get "/account", to: "account#info", as: "info"
+  get "/feed", to: "feed#show", as: "show"
 
   # maps requests to the root of the application to the welcome controller's index action
   root 'welcome#index'
