@@ -31,7 +31,7 @@ class OotdRecommendationController < ApplicationController
         if (@feels_like_in_F < 32) 
             # below 32 F is very cold
             @suggestion = ActionController::Base.helpers.asset_path("verycold.jpg")   
-            @clothing = "Suggetions: A heavy winter parka and jeans.";
+            @clothing = "Suggestions: A heavy winter parka and jeans.";
         else 
             # above 32 F is moderately cold 
             @suggestion = ActionController::Base.helpers.asset_path("moderatelycold.jpg")
