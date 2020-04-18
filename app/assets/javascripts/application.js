@@ -30,9 +30,9 @@
 //     })
 // }
 
-$(document).ready(function(){
-    console.log("ready!!!");
-  $("#uploadbutton").click(function(){
+$(document).ready(function () {
+  console.log("ready!!!");
+  $("#uploadbutton").click(function () {
     $("#photo_id").show();
   });
 });
