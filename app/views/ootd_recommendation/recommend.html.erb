@@ -8,6 +8,10 @@
     <p>Today's weather is:</p>
     <p><%= @main %> and <%= @feels_like_in_F %> °F</p>
 
-    <%= image_tag(@suggestion) %>
+    <%= image_tag(@suggestion, :size =>"400x600") %>
+
+    <br>
+    <br>
+
     <p><%= @clothing %></p>
 </div>
