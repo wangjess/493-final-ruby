@@ -11,11 +11,18 @@ Things you may want to cover:
 
 * Configuration
 
-* Database creation
-
-* Database initialization
-
 * How to run the test suite
+After you have set up your environment, to run the app locally, you should go to the project root and run:
+```rails server```
+
+This will run the server. Then, in your browser, go to:
+
+```127.0.0.1:3000```
+
+You will have successfully run our app!
+
+
+
 
 * Services (job queues, cache servers, search engines, etc.)
 
